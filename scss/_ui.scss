@@ -1,0 +1,14 @@
+body {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+.btn {
+  background-color: $btn-color;
+  color: $btn-text-color;
+
+  &:hover {
+    background-color: $btn-color;
+    color: $btn-text-hover;
+  }
+}
