@@ -1990,10 +1990,10 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #ffffff;
+  color: #fff;
   background-color: #202a37;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #d1dade;
   appearance: none;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2010,7 +2010,7 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #ffffff;
+  color: #fff;
   background-color: #202a37;
   border-color: #86b7fe;
   outline: 0;
@@ -2031,7 +2031,7 @@ progress {
   padding: 0.375rem 0.75rem;
   margin: -0.375rem -0.75rem;
   margin-inline-end: 0.75rem;
-  color: #ffffff;
+  color: #fff;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2133,13 +2133,13 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #ffffff;
+  color: #fff;
   background-color: #202a37;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: 1px solid #ced4da;
+  border: 1px solid #d1dade;
   border-radius: 0.375rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
@@ -2163,7 +2163,7 @@ textarea.form-control-lg {
 }
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #ffffff;
+  text-shadow: 0 0 0 #fff;
 }
 
 .form-select-sm {
@@ -2489,11 +2489,11 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-  border: 1px solid #ced4da;
+  border: 1px solid #d1dade;
   border-radius: 0.375rem;
 }
 
@@ -4099,9 +4099,9 @@ textarea.form-control-lg {
   --bs-navbar-color: rgba(255, 255, 255, 0.55);
   --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #fff;
-  --bs-navbar-brand-color: #fff;
-  --bs-navbar-brand-hover-color: #fff;
+  --bs-navbar-active-color: #4adf86;
+  --bs-navbar-brand-color: #4adf86;
+  --bs-navbar-brand-hover-color: #4adf86;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -10774,13 +10774,19 @@ body {
   color: #ffffff;
 }
 
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .btn {
   background-color: #4adf86;
-  color: #fff;
+  color: #202a37;
+  border: none;
 }
 .btn:hover {
   background-color: #4adf86;
-  color: #202a37;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
