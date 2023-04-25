@@ -1,6 +1,8 @@
 const form = document.querySelector("#registerForm");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(event.target);
+  const signUpForm = event.target;
+  const formData = new FormData(signUpForm);
+  const profile = Object.fromEntries(formData.entries());
 });
