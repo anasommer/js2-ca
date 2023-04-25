@@ -10776,7 +10776,11 @@ body {
 
 main {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 4rem auto 1rem;
+}
+
+h1, .h1 {
+  margin-bottom: 2rem;
 }
 
 .btn {
@@ -10787,6 +10791,10 @@ main {
 .btn:hover {
   background-color: #4adf86;
   color: #fff;
+}
+
+label {
+  margin-bottom: 0.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

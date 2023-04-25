@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NorOff Social Media</title>
+    <title>Register | NorOff Social Media</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="/profile/login"
@@ -33,7 +33,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/profile/register"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/profile/register"
                 >Register</a
               >
             </li>
@@ -53,15 +56,48 @@
       </div>
     </nav>
     <main>
-      <div class="container text-center mt-3">
-        <div class="row">
-          <h1>NorOff Social Media App</h1>
-
-          <div class="col-6 offset-3 mb-3 mt-3">
-            <a class="btn btn-primary" href="/profile/login">Login</a>
-          </div>
-          <div class="col-6 offset-3">
-            <a class="btn btn-primary" href="/profile/register">Register</a>
+      <div class="container mt-3">
+        <div class="row justify-content-center">
+          <h1 class="text-center">Register New User</h1>
+          <div class="col-12 col-md-6">
+            <form action="" id="registerForm">
+              <div class="form-group mb-3">
+                <label for="name">Name:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  required
+                  pattern="^[\w]+$"
+                  title="Username must only contain lowercase and uppercase letters, numbers & underscore. Example: Good_Username123 "
+                  id="name"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="email">Email:</label>
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                  title="Only @(stud.)noroff.no are allowed to register."
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="password">Password:</label>
+                <input
+                  id="password"
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <button class="btn btn-primary">Register</button>
+            </form>
           </div>
         </div>
       </div>
