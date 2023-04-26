@@ -2,7 +2,8 @@ import { BASE_URL } from "../api/constants.js";
 import { fetchData } from "../api/call.js";
 
 const form = document.querySelector("#registerForm");
-const registerEndpoint = "auth/register";
+const endpoint = "auth/register";
+const method = "POST";
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -10,12 +11,12 @@ form.addEventListener("submit", (event) => {
   const profile = Object.fromEntries(formData.entries());
 
   const registerOptions = {
-    method: "POST",
+    method,
     body: JSON.stringify(profile),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   };
 
-  fetchData(BASE_URL, registerEndpoint, registerOptions);
+  fetchData(BASE_URL, endpoint, registerOptions);
 });

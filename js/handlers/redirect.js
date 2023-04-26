@@ -20,7 +20,7 @@ export async function redirectToPostFeed(accessToken) {
       window.location.replace("/posts");
     }
     return data;
-  } catch (error) {
-    displayMessage("warning", error);
+  } catch {
+    displayMessage("warning", "Error!");
   }
 }
