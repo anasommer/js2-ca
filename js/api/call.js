@@ -8,8 +8,6 @@ export async function fetchData(BASE_URL, endpoint, options = {}) {
     response.status === 201
       ? displayMessage()
       : displayMessage("warning", data.errors[0].message);
-
-    return data;
   } catch (error) {
     displayMessage("warning", error);
     console.log(error);
