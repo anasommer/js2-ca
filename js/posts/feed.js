@@ -1,5 +1,5 @@
 const token = localStorage.getItem("accessToken");
-const feedContainer = document.getElementById("feedContainer");
+const feedContainer = document.querySelector("#feedContainer");
 import { getPosts } from "../api/getPosts.js";
 import spinner from "./spinner.js";
 
