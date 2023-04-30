@@ -33,6 +33,7 @@ async function login(profile) {
       "accessToken",
       JSON.stringify(result.accessToken)
     );
+    localStorage.setItem("username", JSON.stringify(result.email));
     redirectToPostFeed(token);
   } catch (error) {
     displayMessage("warning", error);

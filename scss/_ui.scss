@@ -22,6 +22,16 @@ h1 {
 
     color: $btn-text-color;
   }
+  &-warning {
+    background-color: #e06469;
+    color: #fff;
+  }
+  &-warning:hover {
+    background-color: #f55050;
+  }
+  &-edit {
+    background-color: #fff9b6;
+  }
 }
 
 label {

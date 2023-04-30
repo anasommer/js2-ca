@@ -10792,6 +10792,16 @@ h1, .h1 {
   background-color: #4adf86;
   color: #fff;
 }
+.btn-warning {
+  background-color: #e06469;
+  color: #fff;
+}
+.btn-warning:hover {
+  background-color: #f55050;
+}
+.btn-edit {
+  background-color: #fff9b6;
+}
 
 label {
   margin-bottom: 0.3rem;
