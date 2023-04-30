@@ -10800,8 +10800,14 @@ h1, .h1 {
 .btn-warning:hover {
   background-color: #f55050;
 }
-.btn-edit {
+.btn-edit, .btn-edit:hover {
   background-color: #fff9b6;
+  color: #000;
+  margin-right: 0.5rem;
+}
+.btn-new-post {
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 label {
@@ -10810,6 +10816,10 @@ label {
 
 #message {
   margin: 2rem auto;
+}
+
+.post {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
