@@ -2,8 +2,6 @@ import { BASE_URL } from "../api/constants.js";
 import { displayMessage } from "../ui/displayMessage.js";
 
 export async function redirectToPostFeed(accessToken) {
-  accessToken = localStorage.getItem("accessToken");
-
   const options = {
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -19,8 +17,7 @@ export async function redirectToPostFeed(accessToken) {
     } else {
       window.location.replace("/posts");
     }
-    return data;
-  } catch (error) {
-    displayMessage("warning", error);
+  } catch {
+    displayMessage("warning", "Error!");
   }
 }
