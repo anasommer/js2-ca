@@ -1,6 +1,8 @@
 import { BASE_URL } from "../api/constants.js";
 import { renderPosts } from "./renderPosts.js";
 
+const postsToShow = 20;
+
 export async function getPosts(element) {
   const token = localStorage.getItem("accessToken");
   const endpoint = "posts";
@@ -14,8 +16,10 @@ export async function getPosts(element) {
   };
   await fetch(`${BASE_URL}${endpoint}`, options).then((response) =>
     response.json().then((posts) =>
-      posts.map((post) => {
-        renderPosts(post, feedContainer);
+      posts.map((post, index) => {
+        if (index < postsToShow) {
+          renderPosts(post, feedContainer);
+        }
       })
     )
   );

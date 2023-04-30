@@ -3,6 +3,7 @@ import spinner from "../posts/spinner.js";
 export function renderPosts(post, element) {
   spinner.style.display = "none";
   const { title, body, id } = post;
+
   const postItem = document.createElement("div");
   postItem.classList.add("post");
 
