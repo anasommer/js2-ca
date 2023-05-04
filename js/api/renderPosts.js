@@ -1,4 +1,5 @@
 import spinner from "../posts/spinner.js";
+import { deletePost } from "./deletePost.js";
 
 export function renderPosts(post, element) {
   spinner.style.display = "none";
@@ -28,14 +29,14 @@ export function renderPosts(post, element) {
   const deleteBtn = document.createElement("button");
   deleteBtn.classList.add("btn", "btn-warning");
   deleteBtn.textContent = "Delete";
-  deleteBtn.setAttribute("id", "id");
-  deleteBtn.addEventListener("click", deletePost);
+  deleteBtn.setAttribute("data-id", id);
+  deleteBtn.addEventListener("click", confirmDelete);
   postItem.append(deleteBtn);
 
   element.append(postItem);
 }
 
-function deletePost(event) {
-  // confirm("Please confirm deleting of post");
-  console.log(event.getAttribute("id"));
+function confirmDelete(event) {
+  const postId = event.target.getAttribute("data-id");
+  confirm("Please confirm deleting of post") && deletePost(postId);
 }
