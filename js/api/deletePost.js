@@ -12,7 +12,7 @@ export async function deletePost(postId) {
   };
 
   try {
-    fetch(`${BASE_URL}${endpoint}${postId}`, options);
+    await fetch(`${BASE_URL}${endpoint}${postId}`, options);
   } finally {
     window.location.reload();
   }
