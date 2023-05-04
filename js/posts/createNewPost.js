@@ -7,7 +7,6 @@ const newPostForm = document.querySelector("#newPostForm");
 const endpoint = "posts";
 const method = "POST";
 
-console.log(JSON.parse(accessToken));
 newPostForm.addEventListener("submit", getNewPostData);
 
 function getNewPostData(event) {
