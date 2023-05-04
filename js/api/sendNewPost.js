@@ -9,5 +9,10 @@ export async function sendNewPost(BASE_URL, endpoint, options = {}) {
   } finally {
     displayMessage();
     document.querySelector("#post-btn").disabled = true;
+    setTimeout(backToFeed, 2000);
   }
+}
+
+function backToFeed() {
+  document.location.href = "/posts";
 }
