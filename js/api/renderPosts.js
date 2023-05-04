@@ -28,7 +28,14 @@ export function renderPosts(post, element) {
   const deleteBtn = document.createElement("button");
   deleteBtn.classList.add("btn", "btn-warning");
   deleteBtn.textContent = "Delete";
+  deleteBtn.setAttribute("id", "id");
+  deleteBtn.addEventListener("click", deletePost);
   postItem.append(deleteBtn);
 
   element.append(postItem);
+}
+
+function deletePost(event) {
+  // confirm("Please confirm deleting of post");
+  console.log(event.getAttribute("id"));
 }
