@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit post | NorOff Social Media</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">NorOff Social App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu"></ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="containermt-3">
+        <div class="row">
+          <h1 class="text-center">Edit Post</h1>
+
+          <div class="col-6 offset-3 mb-3 mt-3" id="newPost">
+            <form id="newPostForm">
+              <div class="form-group mb-3">
+                <label for="postTitle">Title:</label>
+                <input
+                  class="form-control"
+                  id="postTitle"
+                  type="text"
+                  name="postTitle"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="postBody">Post:</label>
+                <textarea
+                  name="postBody"
+                  id="postBody"
+                  class="form-control"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <button class="btn btn-primary" id="post-btn">Update</button>
+            </form>
+            <div class="col-6 offset-3 mb-3 mt-3" id="message"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js" type="module"></script>
+  </body>
+</html>
