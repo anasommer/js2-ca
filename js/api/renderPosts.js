@@ -24,6 +24,8 @@ export function renderPosts(post, element) {
   const editBtn = document.createElement("button");
   editBtn.classList.add("btn", "btn-edit");
   editBtn.textContent = "Edit";
+  editBtn.setAttribute("data-id", id);
+  editBtn.addEventListener("click", redirectToEdit);
   postItem.append(editBtn);
 
   const deleteBtn = document.createElement("button");
@@ -32,11 +34,15 @@ export function renderPosts(post, element) {
   deleteBtn.setAttribute("data-id", id);
   deleteBtn.addEventListener("click", confirmDelete);
   postItem.append(deleteBtn);
-
   element.append(postItem);
 }
 
 function confirmDelete(event) {
   const postId = event.target.getAttribute("data-id");
   confirm("Please confirm deleting of post") && deletePost(postId);
+}
+
+function redirectToEdit() {
+  confirm("Would you like to edit this post?") &&
+    window.location.replace("../../posts/edit.html");
 }
