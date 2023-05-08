@@ -42,7 +42,7 @@ function confirmDelete(event) {
   confirm("Please confirm deleting of post") && deletePost(postId);
 }
 
-function redirectToEdit() {
-  confirm("Would you like to edit this post?") &&
-    window.location.replace("../../posts/edit.html");
+function redirectToEdit(event) {
+  const postId = event.target.getAttribute("data-id");
+  window.location.replace(`../../posts/edit.html?id=${postId}`);
 }
