@@ -9,8 +9,7 @@ export async function redirectToPostFeed(accessToken) {
   };
 
   try {
-    const response = await fetch(`${BASE_URL}posts`, options);
-    const data = await response.json();
+    await fetch(`${BASE_URL}posts`, options);
 
     if (localStorage.getItem("accessToken") === "undefined") {
       displayMessage("warning", "Wrong username or password");

@@ -18,7 +18,7 @@ export async function getPosts(element) {
     response.json().then((posts) =>
       posts.map((post, index) => {
         if (index < postsToShow) {
-          renderPosts(post, feedContainer);
+          renderPosts(post, element);
         }
       })
     )

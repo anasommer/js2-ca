@@ -1,8 +1,9 @@
 export function buildMenu() {
   const menu = document.querySelector("#menu");
   const path = window.location.pathname;
+  const token = localStorage.getItem("accessToken");
 
-  if (localStorage.getItem("accessToken")) {
+  if (token) {
     menu.innerHTML = `
         <li class="nav-item">
         <a class="nav-link ${
@@ -26,6 +27,7 @@ export function buildMenu() {
       </li>
     
         `;
+
     document.querySelector("#logout-btn").addEventListener("click", () => {
       const userResponse = confirm("Are you sure you want log out?");
       userResponse && localStorage.clear();
