@@ -3,7 +3,7 @@ import { backToFeed } from "../handlers/backToFeed.js";
 
 export async function sendNewPost(BASE_URL, endpoint, options = {}) {
   try {
-    const response = await fetch(`${BASE_URL}${endpoint}`, options);
+    await fetch(`${BASE_URL}${endpoint}`, options);
   } catch (error) {
     console.log(error);
   } finally {

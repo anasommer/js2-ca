@@ -13,7 +13,7 @@ export function renderPosts(post, element) {
   postItem.append(postTitle);
 
   const postId = document.createElement("a");
-  postId.setAttribute("href", `?id=${id}`);
+  postId.setAttribute("href", `post.html?id=${id}`);
   postId.textContent = `#${id}`;
   postItem.append(postId);
 
