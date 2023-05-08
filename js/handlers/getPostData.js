@@ -15,6 +15,7 @@ export async function getPostData(url, token, id) {
     .then((response) => response.json())
     .then((data) => {
       const { title, body } = data;
+
       getPostForm(title, body);
     });
 }
