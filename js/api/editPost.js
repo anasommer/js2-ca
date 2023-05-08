@@ -1,12 +1,15 @@
 import { BASE_URL } from "../api/constants.js";
 import { accessToken } from "./token.js";
 import { getPostData } from "../handlers/getPostData.js";
+import { getPostId } from "../handlers/getPostId.js";
+import { updatePost } from "../handlers/updatePost.js";
 
-const queryString = document.location.search;
-const parameter = new URLSearchParams(queryString);
-const id = parameter.get("id");
+const form = document.querySelector("#editPostForm");
+const id = getPostId();
 
-function editPost(id) {
+form.addEventListener("submit", updatePost);
+
+function editPost() {
   getPostData(BASE_URL, accessToken, id);
 }
 
