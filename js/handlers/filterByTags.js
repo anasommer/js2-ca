@@ -1,3 +1,4 @@
 export function filterByTags(event) {
-  console.log(event.target);
+  const tag = event.target.getAttribute("data-tags");
+  console.log(tag);
 }

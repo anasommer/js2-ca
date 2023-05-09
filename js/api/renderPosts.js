@@ -25,6 +25,7 @@ export function renderPosts(post, element) {
   const postTags = document.createElement("button");
   postTags.classList.add("badge", "text-bg-info");
   postTags.textContent = `#${tags}`;
+  postTags.setAttribute("data-tags", tags);
   postTags.addEventListener("click", filterByTags);
   postItem.append(postTags);
 
