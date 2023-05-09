@@ -3,7 +3,7 @@ import { deletePost } from "./deletePost.js";
 
 export function renderPosts(post, element) {
   spinner.style.display = "none";
-  const { title, body, id } = post;
+  const { title, body, id, tags } = post;
 
   const postItem = document.createElement("div");
   postItem.classList.add("post");
@@ -21,6 +21,11 @@ export function renderPosts(post, element) {
   postBody.textContent = `${body}`;
   postItem.append(postBody);
 
+  const postTags = document.createElement("span");
+  postTags.classList.add("badge", "text-bg-info");
+  postTags.textContent = `#${tags}`;
+  postItem.append(postTags);
+
   const editBtn = document.createElement("button");
   editBtn.classList.add("btn", "btn-edit");
   editBtn.textContent = "Edit";
@@ -34,6 +39,7 @@ export function renderPosts(post, element) {
   deleteBtn.setAttribute("data-id", id);
   deleteBtn.addEventListener("click", confirmDelete);
   postItem.append(deleteBtn);
+
   element.append(postItem);
 }
 
