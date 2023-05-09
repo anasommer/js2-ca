@@ -14,8 +14,8 @@ export async function getPostData(url, token, id) {
   await fetch(`${url}${endpoint}${id}`, options)
     .then((response) => response.json())
     .then((data) => {
-      const { title, body } = data;
+      const { title, body, tags } = data;
 
-      getPostForm(title, body);
+      getPostForm(title, body, tags);
     });
 }

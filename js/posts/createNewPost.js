@@ -13,12 +13,13 @@ function getNewPostData(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
   const newPostData = Object.fromEntries(formData.entries());
-  const { postTitle, postBody } = newPostData;
+  const { postTitle, postBody, postTags } = newPostData;
   const newPostOptions = {
     method,
     body: JSON.stringify({
       title: postTitle,
       body: postBody,
+      tags: [postTags],
     }),
     headers: {
       Authorization: `Bearer ${JSON.parse(accessToken)}`,
