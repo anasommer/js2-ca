@@ -1,7 +1,7 @@
 import { BASE_URL } from "../api/constants.js";
 import { renderPosts } from "../api/renderPosts.js";
 
-export async function getPostTags(event) {
+export async function showPostByTags(event) {
   const tag = event.target.getAttribute("data-tags");
   const feedContainer = document.querySelector("#feedContainer");
 

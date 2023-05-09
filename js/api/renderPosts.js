@@ -1,6 +1,6 @@
 import spinner from "../posts/spinner.js";
 import { deletePost } from "./deletePost.js";
-import { getPostTags } from "../handlers/getPostTags.js";
+import { showPostByTags } from "../handlers/showPostByTags.js";
 
 export function renderPosts(post, element) {
   spinner.style.display = "none";
@@ -26,7 +26,7 @@ export function renderPosts(post, element) {
   postTags.classList.add("badge", "text-bg-info");
   postTags.textContent = `#${tags}`;
   postTags.setAttribute("data-tags", tags);
-  postTags.addEventListener("click", getPostTags);
+  postTags.addEventListener("click", showPostByTags);
   postItem.append(postTags);
 
   const editBtn = document.createElement("button");
