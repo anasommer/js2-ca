@@ -10,6 +10,5 @@ export async function fetchData(BASE_URL, endpoint, options = {}) {
       : displayMessage("warning", data.errors[0].message);
   } catch (error) {
     displayMessage("warning", error);
-    console.log(error);
   }
 }
