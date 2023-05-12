@@ -18,5 +18,10 @@ form.addEventListener("submit", (event) => {
     },
   };
 
-  fetchData(BASE_URL, endpoint, registerOptions);
+  try {
+    fetchData(BASE_URL, endpoint, registerOptions);
+    form.reset();
+  } catch (error) {
+    console.log(error);
+  }
 });
