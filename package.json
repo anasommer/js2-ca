@@ -6,17 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass scss:css",
-    "docs": "jsdoc -c ./conf.json -r"
+    "watch": "sass --watch scss:css",
+    "docs": "jsdoc -c ./cong.json -r"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jsdoc": "^4.0.2",
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "jsdoc": "^4.0.2"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "live-server": "^1.1.0"
+    "live-server": "^1.2.2"
   }
 }
