@@ -1,5 +1,3 @@
-[![Project plan in Trello](https://trello.com/invite/b/IiYfKAsm/ATTIee7157dd1f9617e65a72ab4292a95c7f69986830/js2-ca)]()
-
 # [NorOff Javascript 2 Course Assignment] | [Front-End Development 2 year]
 
 ![Project plan in Trello](https://trello.com/invite/b/IiYfKAsm/ATTIee7157dd1f9617e65a72ab4292a95c7f69986830/js2-ca)
