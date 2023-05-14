@@ -2,6 +2,7 @@ export function buildMenu() {
   const menu = document.querySelector("#menu");
   const path = window.location.pathname;
   const token = localStorage.getItem("accessToken");
+  const username = JSON.parse(localStorage.getItem("username"));
 
   if (token) {
     menu.innerHTML = `
@@ -22,7 +23,7 @@ export function buildMenu() {
           class="btn btn-warning" id="logout-btn"
           aria-current="page"
           href="/"
-          >Log Out</a
+          >Log Out ${username}</a
         >
       </li>
     
@@ -43,7 +44,7 @@ export function buildMenu() {
     <a class="nav-link ${
       path === "/login.html" ? "active" : ""
     }" aria-current="page" href="/profile/login.html"
-      >Login</a
+      >Login </a
     >
   </li>
   <li class="nav-item">

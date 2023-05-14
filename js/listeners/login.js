@@ -34,7 +34,7 @@ export function login() {
         "accessToken",
         JSON.stringify(result.accessToken)
       );
-      localStorage.setItem("username", JSON.stringify(result.email));
+      localStorage.setItem("username", JSON.stringify(result.name));
       redirectToPostFeed(token);
     } catch (error) {
       displayMessage("warning", error);
