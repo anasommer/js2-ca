@@ -3,9 +3,7 @@ import { redirectToPostFeed } from "../helpers/redirect.js";
 import { displayMessage } from "../ui/common/displayMessage.js";
 
 /**
- * Function for logging user to the page.
- * It will collect form data such as email and password and will send it to the API.
- * Then if everything is correct, the function will get back accesstoken which then will be stored in local storage.
+ * Performs a login operation
  */
 export function login() {
   const endpoint = "auth/login";
@@ -13,6 +11,10 @@ export function login() {
 
   const form = document.querySelector("#registerForm");
 
+  /**
+   * Event listener for the form submisiion
+   * @param {event} event - The submit event.
+   */
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -20,6 +22,11 @@ export function login() {
 
     login(profile);
   });
+
+  /**
+   * Handles the login operation
+   * @param {object} profile - The user profile object.
+   */
 
   async function login(profile) {
     const loginURL = `${BASE_URL}${endpoint}`;
