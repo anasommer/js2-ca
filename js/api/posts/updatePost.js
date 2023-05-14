@@ -1,7 +1,7 @@
-import { BASE_URL } from "../api/constants.js";
-import { accessToken } from "../api/token.js";
+import { BASE_URL } from "../constants.js";
+import { accessToken } from "../token.js";
 import { getPostId } from "./getPostId.js";
-import { backToFeed } from "./backToFeed.js";
+import { backToFeed } from "../../handlers/backToFeed.js";
 import { displayMessage } from "../ui/displayMessage.js";
 
 const id = getPostId();

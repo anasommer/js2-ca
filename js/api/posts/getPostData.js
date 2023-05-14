@@ -1,4 +1,4 @@
-import { getPostForm } from "./getPostForm.js";
+import { getPostForm } from "../../helpers/getPostForm.js";
 
 export async function getPostData(url, token, id) {
   const endpoint = "posts/";

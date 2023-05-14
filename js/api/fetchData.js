@@ -1,4 +1,4 @@
-import { displayMessage } from "../ui/displayMessage.js";
+import { displayMessage } from "../ui/common/displayMessage.js";
 
 export async function fetchData(BASE_URL, endpoint, options = {}) {
   try {

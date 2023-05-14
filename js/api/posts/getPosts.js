@@ -1,4 +1,4 @@
-import { BASE_URL } from "../api/constants.js";
+import { BASE_URL } from "../constants.js";
 import { renderPosts } from "./renderPosts.js";
 
 const postsToShow = 20;

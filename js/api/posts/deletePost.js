@@ -1,5 +1,5 @@
-import { BASE_URL } from "../api/constants.js";
-import { accessToken } from "./token.js";
+import { BASE_URL } from "../constants.js";
+import { accessToken } from "../token.js";
 
 export async function deletePost(postId) {
   const endpoint = "posts/";

@@ -1,5 +1,5 @@
 import { BASE_URL } from "../api/constants.js";
-import { sendNewPost } from "../api/sendNewPost.js";
+import { sendNewPost } from "../api/posts/sendNewPost.js";
 import { accessToken } from "../api/token.js";
 
 const newPostForm = document.querySelector("#newPostForm");

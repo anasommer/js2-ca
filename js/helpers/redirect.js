@@ -1,5 +1,5 @@
 import { BASE_URL } from "../api/constants.js";
-import { displayMessage } from "../ui/displayMessage.js";
+import { displayMessage } from "../ui/common/displayMessage.js";
 
 export async function redirectToPostFeed(accessToken) {
   const options = {

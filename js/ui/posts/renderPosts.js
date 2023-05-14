@@ -1,6 +1,6 @@
-import spinner from "../posts/spinner.js";
-import { deletePost } from "./deletePost.js";
-import { showPostByTags } from "../handlers/showPostByTags.js";
+import spinner from "../../posts/spinner.js";
+import { deletePost } from "../../api/posts/deletePost.js";
+import { showPostByTags } from "../../listeners/showPostByTags.js";
 
 export function renderPosts(post, element) {
   spinner.style.display = "none";
