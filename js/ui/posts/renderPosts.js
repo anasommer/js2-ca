@@ -43,7 +43,7 @@ export function renderPosts(post, element) {
   deleteBtn.addEventListener("click", confirmDelete);
   postItem.append(deleteBtn);
 
-  element.append(postItem);
+  element && element.append(postItem);
 }
 
 function confirmDelete(event) {

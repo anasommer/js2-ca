@@ -1,5 +1,5 @@
 import { BASE_URL } from "../constants.js";
-import { renderPosts } from "./renderPosts.js";
+import { renderPosts } from "../../ui/posts/renderPosts.js";
 
 const postsToShow = 20;
 
@@ -14,13 +14,15 @@ export async function getPosts(element) {
       Authorization: `Bearer ${JSON.parse(token)}`,
     },
   };
-  await fetch(`${BASE_URL}${endpoint}`, options).then((response) =>
-    response.json().then((posts) =>
-      posts.map((post, index) => {
-        if (index < postsToShow) {
-          renderPosts(post, element);
-        }
-      })
-    )
-  );
+  if (token) {
+    await fetch(`${BASE_URL}${endpoint}`, options).then((response) =>
+      response.json().then((posts) =>
+        posts.map((post, index) => {
+          if (index < postsToShow) {
+            renderPosts(post, element);
+          }
+        })
+      )
+    );
+  }
 }

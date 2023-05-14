@@ -11,11 +11,13 @@ export async function getPostData(url, token, id) {
     },
   };
 
-  await fetch(`${url}${endpoint}${id}`, options)
-    .then((response) => response.json())
-    .then((data) => {
-      const { title, body, tags } = data;
+  if (id) {
+    await fetch(`${url}${endpoint}${id}`, options)
+      .then((response) => response.json())
+      .then((data) => {
+        const { title, body, tags } = data;
 
-      getPostForm(title, body, tags);
-    });
+        getPostForm(title, body, tags);
+      });
+  }
 }

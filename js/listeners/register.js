@@ -1,23 +1,25 @@
 import { BASE_URL } from "../api/constants.js";
 import { fetchData } from "../api/fetchData.js";
 
-const form = document.querySelector("#registerForm");
-const endpoint = "auth/register";
-const method = "POST";
+export function register() {
+  const form = document.querySelector("#registerForm");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  const profile = Object.fromEntries(formData.entries());
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const profile = Object.fromEntries(formData.entries());
+    const endpoint = "auth/register";
+    const method = "POST";
 
-  const registerOptions = {
-    method,
-    body: JSON.stringify(profile),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  };
+    const registerOptions = {
+      method,
+      body: JSON.stringify(profile),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    };
 
-  fetchData(BASE_URL, endpoint, registerOptions);
-  form.reset();
-});
+    fetchData(BASE_URL, endpoint, registerOptions);
+    form.reset();
+  });
+}

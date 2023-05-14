@@ -1,5 +1,5 @@
 import { BASE_URL } from "../api/constants.js";
-import { renderPosts } from "../api/renderPosts.js";
+import { renderPosts } from "../ui/posts/renderPosts.js";
 
 export async function showPostByTags(event) {
   const tag = event.target.getAttribute("data-tags");

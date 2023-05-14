@@ -4,3 +4,5 @@ export function getPostId() {
   const id = parameter.get("id");
   return id;
 }
+
+getPostId();

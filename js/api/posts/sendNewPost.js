@@ -1,5 +1,5 @@
 import { displayMessage } from "../../ui/common/displayMessage.js";
-import { backToFeed } from "../../handlers/backToFeed.js";
+import { backToFeed } from "../../helpers/backToFeed.js";
 
 export async function sendNewPost(BASE_URL, endpoint, options = {}) {
   try {

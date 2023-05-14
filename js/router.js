@@ -1,9 +1,8 @@
 import * as listeners from "../js/listeners/index.js";
+import * as posts from "../js/posts/index.js";
 
 export default function router() {
   const pathname = window.location.pathname;
-
-  console.log(pathname);
 
   switch (pathname) {
     case "/":
@@ -13,7 +12,21 @@ export default function router() {
       listeners.login();
       break;
     case "/profile/register.html":
-      // listeners.registerListener();
+      listeners.register();
+      break;
+    case "/posts":
+    case "/posts/index.html":
+      posts.feed();
+
+      break;
+    case "/posts/add.html":
+      posts.createNewPost();
+      break;
+    case "/posts/edit.html":
+      listeners.editPost();
+      break;
+    case "/posts/post.html":
+      posts.showPostById();
       break;
   }
 }

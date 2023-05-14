@@ -1,11 +1,14 @@
-import { getPostId } from "../handlers/getPostId.js";
+import { getPostId } from "../helpers/getPostId.js";
 import { BASE_URL } from "../api/constants.js";
-import { renderPosts } from "../api/renderPosts.js";
-const id = getPostId();
+import { renderPosts } from "../../js/ui/posts/renderPosts.js";
+
+const feedContainer = document.querySelector("#feedContainer");
 
 const token = localStorage.getItem("accessToken");
 
-async function showPostById(element) {
+export async function showPostById() {
+  const id = getPostId();
+
   const endpoint = "posts/";
   const method = "GET";
   const options = {
@@ -15,11 +18,14 @@ async function showPostById(element) {
       Authorization: `Bearer ${JSON.parse(token)}`,
     },
   };
-  await fetch(`${BASE_URL}${endpoint}${id}`, options).then((response) =>
-    response.json().then((data) => {
-      renderPosts(data, element);
-    })
-  );
+  if (id) {
+    await fetch(`${BASE_URL}${endpoint}${id}`, options).then((response) =>
+      response.json().then((data) => {
+        feedContainer.innerHTML = "";
+        renderPosts(data, feedContainer);
+      })
+    );
+  }
 }
 
-showPostById(feedContainer);
+showPostById();
