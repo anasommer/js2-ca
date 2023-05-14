@@ -1,45 +1,56 @@
-<!-- Just fill in the brackets -->
+[![Project plan in Trello](https://trello.com/invite/b/IiYfKAsm/ATTIee7157dd1f9617e65a72ab4292a95c7f69986830/js2-ca)]()
 
 # [NorOff Javascript 2 Course Assignment] | [Front-End Development 2 year]
 
-[![Project plan in Trello](https://trello.com/invite/b/IiYfKAsm/ATTIee7157dd1f9617e65a72ab4292a95c7f69986830/js2-ca)]()
+![Project plan in Trello](https://trello.com/invite/b/IiYfKAsm/ATTIee7157dd1f9617e65a72ab4292a95c7f69986830/js2-ca)
 
-This is a basic blank README for new projects.
+## Goal
 
-## Development
+Using the provided API and API documentation, create a functioning user interface that allows for viewing, posting, editing and deleting social media content.
 
-[COMPANY] | [SLOGAN]
+Social API routes require authorisation via JWT (JSON Web Tokens). You will need to register an account and login to access your token.
 
-- Website: ([COMPANY WEBSITE](#))
-- Developer: [DEVELOPER NAME]
+To complete the required features, you will also need to make use of GET, POST, PUT, and DELETE HTTP methods.
 
-Server information:
+Using localStorage is highly recommended, especially for storing JWT tokens.
 
-    NS1
-    NS2
-    IP: [ADDRESS]
+A finished project fulfils the requirements below with an easy to use and error-free user interface.
 
-Global DNS:
+## Description
 
-- [DOMAIN]
+The goal of the Javascript 2 Course Assignment is to show student's Javascript techniques to implement the front-end functionality for a social media application.
 
-## Features
+Using provided NorOff API and API documentation, I have been tasked to create a functioning user interface that allows for viewing, posting, editing and deleting social media content.
 
-- [FEATURE 1]
-- [FEATURE 2]
-- [FEATURE 3]
+I used CRUD methods to get, post, put and delete posts.
+JWT was also used to get access token which then was stored in local storage.
 
-## Content management system
+Javascript functions description was made using JSDocs.
 
-- [CMS NAME]
+## Built With
 
-## Deployment
+- HTML
+- CSS
+- Sass
+- JavaScript
+- [NorOff API](https://docs.noroff.dev/)
 
-- GIT/FTP
-  - release -> live
+## Getting Started
 
-## Contribute or Support
+### Installing
 
-If you are having issues, please email the webmaster [NAME (AND ADD EMAIL =>)](mailto:#).
+1. Clone the repo:
 
-## License
+```bash
+git clone git@github.com:anasommer/js2-ca.git
+```
+
+### Running
+
+Start a Live Server to see my project.
+
+## Contact
+
+[My Portolio Page](https://www.anasommer.com/)
+
+[My LinkedIn Page](https://www.linkedin.com/in/anastassia-sommer-146409235/)
