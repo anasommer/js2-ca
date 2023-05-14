@@ -2,6 +2,11 @@ import spinner from "../../posts/spinner.js";
 import { deletePost } from "../../api/posts/deletePost.js";
 import { showPostByTags } from "../../listeners/showPostByTags.js";
 
+/**
+ * Renders HTML for post
+ * @param {object} post The post Object from the API response
+ * @param {element} element The element on the page where the post should be rendered on
+ */
 export function renderPosts(post, element) {
   spinner.style.display = "none";
   const { title, body, id, tags } = post;

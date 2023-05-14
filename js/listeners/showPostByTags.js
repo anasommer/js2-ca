@@ -1,6 +1,10 @@
 import { BASE_URL } from "../api/constants.js";
 import { renderPosts } from "../ui/posts/renderPosts.js";
 
+/**
+ * Function for showing posts by tags.
+ * @param {event} event
+ */
 export async function showPostByTags(event) {
   const tag = event.target.getAttribute("data-tags");
   const feedContainer = document.querySelector("#feedContainer");

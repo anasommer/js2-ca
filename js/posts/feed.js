@@ -2,6 +2,9 @@ import { getPosts } from "../api/posts/getPosts.js";
 import spinner from "./spinner.js";
 import { search } from "./search.js";
 
+/**
+ * Show the posts feed
+ */
 export function feed() {
   const token = localStorage.getItem("accessToken");
   const feedContainer = document.querySelector("#feedContainer");

@@ -1,8 +1,13 @@
 import { BASE_URL } from "../constants.js";
 import { renderPosts } from "../../ui/posts/renderPosts.js";
 
+/** How many posts to show by default on the Feed */
 const postsToShow = 20;
 
+/**
+ * Function gets all the posts from the API to be rendered on the Feed
+ * @param {string} element Element container where all posts will be rendered
+ */
 export async function getPosts(element) {
   const token = localStorage.getItem("accessToken");
   const endpoint = "posts";

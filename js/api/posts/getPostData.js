@@ -1,5 +1,11 @@
 import { getPostForm } from "../../helpers/getPostForm.js";
 
+/**
+ * Function gets post from API
+ * @param {string} url Base link of the API
+ * @param {string} token Authorization token stored in local storage
+ * @param {number} id Post id
+ */
 export async function getPostData(url, token, id) {
   const endpoint = "posts/";
   const method = "GET";

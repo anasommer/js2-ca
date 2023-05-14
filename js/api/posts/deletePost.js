@@ -1,6 +1,11 @@
 import { BASE_URL } from "../constants.js";
 import { accessToken } from "../token.js";
 
+/**
+ * Function deletes the post by getting post ID and prompts delete confirmation from the user before deleting the post.
+ * Then when post is deleted the browser will redirect to the posts feed page.
+ * @param {number} postId ID of the post which is being deleted
+ */
 export async function deletePost(postId) {
   const endpoint = "posts/";
   const options = {

@@ -4,8 +4,13 @@ import { getPostId } from "../../helpers/getPostId.js";
 import { backToFeed } from "../../helpers/backToFeed.js";
 import { displayMessage } from "../../ui/common/displayMessage.js";
 
+/** Constant that holds post ID */
 const id = getPostId();
 
+/**
+ * Function for updatind the post using PUT method, makes API call inside the function
+ * @param {event} event
+ */
 export async function updatePost(event) {
   event.preventDefault();
 

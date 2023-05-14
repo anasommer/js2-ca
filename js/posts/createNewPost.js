@@ -2,6 +2,9 @@ import { BASE_URL } from "../api/constants.js";
 import { sendNewPost } from "../api/posts/sendNewPost.js";
 import { accessToken } from "../api/token.js";
 
+/**
+ * Create new post and make an API call
+ */
 export function createNewPost() {
   const newPostForm = document.querySelector("#newPostForm");
 

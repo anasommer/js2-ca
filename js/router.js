@@ -1,6 +1,9 @@
 import * as listeners from "../js/listeners/index.js";
 import * as posts from "../js/posts/index.js";
 
+/**
+ * Router for JS files
+ */
 export default function router() {
   const pathname = window.location.pathname;
 

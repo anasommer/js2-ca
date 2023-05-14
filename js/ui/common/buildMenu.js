@@ -1,3 +1,6 @@
+/**
+ * Builds a dynamic menu
+ */
 export function buildMenu() {
   const menu = document.querySelector("#menu");
   const path = window.location.pathname;

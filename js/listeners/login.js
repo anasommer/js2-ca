@@ -2,6 +2,11 @@ import { BASE_URL } from "../api/constants.js";
 import { redirectToPostFeed } from "../helpers/redirect.js";
 import { displayMessage } from "../ui/common/displayMessage.js";
 
+/**
+ * Function for logging user to the page.
+ * It will collect form data such as email and password and will send it to the API.
+ * Then if everything is correct, the function will get back accesstoken which then will be stored in local storage.
+ */
 export function login() {
   const endpoint = "auth/login";
   const method = "POST";
