@@ -1,5 +1,6 @@
 import * as listeners from "../js/listeners/index.js";
-import * as posts from "../js/posts/index.js";
+import * as posts from "../js/api/posts/index.js";
+import * as ui from "../js/ui/index.js";
 
 /**
  * Router for JS files
@@ -19,11 +20,10 @@ export default function router() {
       break;
     case "/posts":
     case "/posts/index.html":
-      posts.feed();
-
+      ui.feed();
       break;
     case "/posts/add.html":
-      posts.createNewPost();
+      ui.createNewPost();
       break;
     case "/posts/edit.html":
       listeners.editPost();

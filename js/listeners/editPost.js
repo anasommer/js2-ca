@@ -1,6 +1,6 @@
 import { BASE_URL } from "../api/constants.js";
 import { accessToken } from "../api/token.js";
-import { getPostData } from "../api/posts/getPostData.js";
+import { getPostById } from "../api/posts/getPostById.js";
 import { getPostId } from "../helpers/getPostId.js";
 import { updatePost } from "../api/posts/updatePost.js";
 
@@ -17,7 +17,7 @@ if (form) {
  * Function that calls another function to get post data for the post which will be edited by the user
  */
 export function editPost() {
-  getPostData(BASE_URL, accessToken, getPostId());
+  getPostById(BASE_URL, accessToken, getPostId());
 }
 
 editPost();

@@ -20,7 +20,7 @@ export function login() {
     const formData = new FormData(event.target);
     const profile = Object.fromEntries(formData.entries());
 
-    login(profile);
+    handleLogin(profile);
   });
 
   /**
@@ -28,7 +28,7 @@ export function login() {
    * @param {object} profile - The user profile object.
    */
 
-  async function login(profile) {
+  async function handleLogin(profile) {
     const loginURL = `${BASE_URL}${endpoint}`;
     const body = JSON.stringify(profile);
 

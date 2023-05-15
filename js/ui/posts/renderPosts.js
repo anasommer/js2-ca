@@ -1,4 +1,4 @@
-import spinner from "../../posts/spinner.js";
+import spinner from "../utils/spinner.js";
 import { deletePost } from "../../api/posts/deletePost.js";
 import { showPostByTags } from "../../listeners/showPostByTags.js";
 

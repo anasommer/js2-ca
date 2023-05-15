@@ -6,7 +6,7 @@ import { getPostForm } from "../../helpers/getPostForm.js";
  * @param {string} token Authorization token stored in local storage
  * @param {number} id Post id
  */
-export async function getPostData(url, token, id) {
+export async function getPostById(url, token, id) {
   const endpoint = "posts/";
   const method = "GET";
   const options = {

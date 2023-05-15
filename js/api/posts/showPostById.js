@@ -1,6 +1,6 @@
-import { getPostId } from "../helpers/getPostId.js";
-import { BASE_URL } from "../api/constants.js";
-import { renderPosts } from "../../js/ui/posts/renderPosts.js";
+import { getPostId } from "../../helpers/getPostId.js";
+import { BASE_URL } from "../constants.js";
+import { renderPosts } from "../../ui/posts/renderPosts.js";
 
 const feedContainer = document.querySelector("#feedContainer");
 

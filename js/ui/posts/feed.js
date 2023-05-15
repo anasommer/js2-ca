@@ -1,6 +1,6 @@
-import { getPosts } from "../api/posts/getPosts.js";
-import spinner from "./spinner.js";
-import { search } from "./search.js";
+import { getPosts } from "../../api/posts/getPosts.js";
+import spinner from "../utils/spinner.js";
+import { search } from "../../listeners/search.js";
 
 /**
  * Show the posts feed
