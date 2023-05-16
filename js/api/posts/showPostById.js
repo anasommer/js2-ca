@@ -22,7 +22,7 @@ export async function showPostById() {
     },
   };
   if (id) {
-    await fetch(`${BASE_URL}${endpoint}${id}`, options).then((response) =>
+    fetch(`${BASE_URL}${endpoint}${id}`, options).then((response) =>
       response.json().then((data) => {
         if (feedContainer) {
           feedContainer.innerHTML = "";

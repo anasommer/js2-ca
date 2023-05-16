@@ -22,8 +22,8 @@ export async function getPostById(url, token, id) {
       .then((response) => response.json())
       .then((data) => {
         const { title, body, tags } = data;
-
         getPostForm(title, body, tags);
-      });
+      })
+      .catch((error) => console.log(error));
   }
 }

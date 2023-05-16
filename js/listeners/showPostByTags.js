@@ -23,7 +23,7 @@ export async function showPostByTags(event) {
 
   feedContainer.innerHTML = "";
 
-  await fetch(`${BASE_URL}${endpoint}${tag}`, options).then((response) =>
+  fetch(`${BASE_URL}${endpoint}${tag}`, options).then((response) =>
     response.json().then((posts) =>
       posts.map((post) => {
         renderPosts(post, feedContainer);

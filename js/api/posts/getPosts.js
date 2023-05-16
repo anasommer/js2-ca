@@ -22,7 +22,7 @@ export async function getPosts(element) {
     },
   };
   if (token) {
-    await fetch(`${BASE_URL}${endpoint}`, options).then((response) =>
+    fetch(`${BASE_URL}${endpoint}`, options).then((response) =>
       response.json().then((posts) =>
         posts.map((post, index) => {
           if (index < postsToShow) {

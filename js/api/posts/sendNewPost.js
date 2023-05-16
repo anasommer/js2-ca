@@ -8,13 +8,11 @@ import { backToFeed } from "../../helpers/backToFeed.js";
  * @param {object} options Object containing authorization, headers, body etc.
  */
 export async function sendNewPost(BASE_URL, endpoint, options = {}) {
-  try {
-    await fetch(`${BASE_URL}${endpoint}`, options);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    displayMessage();
-    document.querySelector("#post-btn").disabled = true;
-    setTimeout(backToFeed, 2000);
-  }
+  fetch(`${BASE_URL}${endpoint}`, options)
+    .catch((error) => displayMessage("warning", error))
+    .finally(() => {
+      displayMessage();
+      document.querySelector("#post-btn").disabled = true;
+      setTimeout(backToFeed, 2000);
+    });
 }

@@ -28,7 +28,7 @@ export async function updatePost(event) {
     },
   };
 
-  await fetch(`${BASE_URL}${endpoint}`, options).then((response) =>
+  fetch(`${BASE_URL}${endpoint}`, options).then((response) =>
     response.json().then(displayMessage()).then(setTimeout(backToFeed, 2000))
   );
 }
