@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.62.0",
-    "jsdoc": "^4.0.2"
+    "jsdoc": "^4.0.2",
+    "sass": "^1.62.0"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
