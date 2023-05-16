@@ -1,4 +1,4 @@
-export * from "./login.js";
+export * from "./profile/login.js";
 export * from "./editPost.js";
-export * from "./register.js";
+export * from "./profile/register.js";
 export * from "./showPostByTags.js";

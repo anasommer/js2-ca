@@ -24,7 +24,9 @@ export async function showPostById() {
   if (id) {
     await fetch(`${BASE_URL}${endpoint}${id}`, options).then((response) =>
       response.json().then((data) => {
-        feedContainer.innerHTML = "";
+        if (feedContainer) {
+          feedContainer.innerHTML = "";
+        }
         renderPosts(data, feedContainer);
       })
     );

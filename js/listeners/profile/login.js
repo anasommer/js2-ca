@@ -1,4 +1,4 @@
-import { handleLogin } from "../api/profile/login.js";
+import { handleLogin } from "../../api/profile/login.js";
 
 /**
  * Performs a login operation

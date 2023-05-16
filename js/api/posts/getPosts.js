@@ -10,7 +10,9 @@ const postsToShow = 20;
  */
 export async function getPosts(element) {
   const token = localStorage.getItem("accessToken");
-  const endpoint = "posts";
+  const username = JSON.parse(localStorage.getItem("username"));
+  const endpoint = `profiles/${username}/posts`;
+  const url = `${BASE_URL}${endpoint}`;
   const method = "GET";
   const options = {
     method,
