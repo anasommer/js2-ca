@@ -18,7 +18,7 @@ export async function getPostById(url, token, id) {
   };
 
   if (id) {
-    await fetch(`${url}${endpoint}${id}`, options)
+    fetch(`${url}${endpoint}${id}`, options)
       .then((response) => response.json())
       .then((data) => {
         const { title, body, tags } = data;

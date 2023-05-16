@@ -1,5 +1,3 @@
-const path = window.location.pathname;
-
 /**
  * Shows the message to the user if something is ok or wrong
  * @param {string} color Bootstrap color for coloring the message alert

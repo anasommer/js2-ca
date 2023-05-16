@@ -6,8 +6,10 @@ export function buildMenu() {
   const path = window.location.pathname;
   const token = localStorage.getItem("accessToken");
   const username = JSON.parse(localStorage.getItem("username"));
+  const brand = document.querySelector("#brand");
 
   if (token) {
+    brand.setAttribute("href", "/posts");
     menu.innerHTML = `
         <li class="nav-item">
         <a class="nav-link ${
