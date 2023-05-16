@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NorOff Social Media</title>
+    <title>Add new post | NorOff Social Media</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -44,17 +44,44 @@
       </div>
     </nav>
     <main>
-      <div class="container text-center mt-3">
+      <div class="containermt-3">
         <div class="row">
-          <h1>NorOff Social Media App</h1>
+          <h1 class="text-center">Add New Post</h1>
 
-          <div class="col-6 offset-3 mb-3 mt-3">
-            <a class="btn btn-primary" href="/profile/login.html">Login</a>
-          </div>
-          <div class="col-6 offset-3">
-            <a class="btn btn-primary" href="/profile/register.html"
-              >Register</a
-            >
+          <div class="col-6 offset-3 mb-3 mt-3" id="newPost">
+            <div class="col-6 offset-3 mb-3 mt-3" id="message"></div>
+            <form id="newPostForm">
+              <div class="form-group mb-3">
+                <label for="postTitle">Title:</label>
+                <input
+                  class="form-control"
+                  id="postTitle"
+                  type="text"
+                  name="postTitle"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="postTags">Tags:</label>
+                <input
+                  class="form-control"
+                  id="postTags"
+                  type="text"
+                  name="postTags"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="postBody">Post:</label>
+                <textarea
+                  name="postBody"
+                  id="postBody"
+                  class="form-control"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <button class="btn btn-primary" id="post-btn">Post</button>
+            </form>
           </div>
         </div>
       </div>
@@ -64,6 +91,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="js/index.js" type="module"></script>
+    <script src="../js/index.js" type="module"></script>
   </body>
 </html>

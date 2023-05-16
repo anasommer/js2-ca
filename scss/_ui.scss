@@ -1,0 +1,63 @@
+body {
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+main {
+  max-width: 800px;
+  margin: 4rem auto 1rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: $h1-color;
+}
+
+.btn {
+  background-color: $btn-color;
+  color: $btn-text-hover;
+  border: none;
+
+  &:hover {
+    background-color: $btn-color;
+
+    color: $btn-text-color;
+  }
+  &-warning {
+    background-color: #e06469;
+    color: #fff;
+  }
+  &-warning:hover {
+    background-color: #f55050;
+  }
+  &-edit,
+  &-edit:hover {
+    background-color: #fff9b6;
+    color: #000;
+    margin-right: 0.5rem;
+  }
+
+  &-new-post {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+label {
+  margin-bottom: 0.3rem;
+}
+
+#message {
+  margin: 2rem auto;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: block;
+  border: none;
+  width: 30%;
+  margin: 0 auto 1rem;
+}

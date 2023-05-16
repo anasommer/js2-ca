@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NorOff Social Media</title>
+    <title>Dashboard | NorOff Social Media</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -46,16 +46,13 @@
     <main>
       <div class="container text-center mt-3">
         <div class="row">
-          <h1>NorOff Social Media App</h1>
+          <h1>Posts Feed:</h1>
 
-          <div class="col-6 offset-3 mb-3 mt-3">
-            <a class="btn btn-primary" href="/profile/login.html">Login</a>
-          </div>
-          <div class="col-6 offset-3">
-            <a class="btn btn-primary" href="/profile/register.html"
-              >Register</a
-            >
-          </div>
+          <a href="add.html" class="btn btn-primary btn-new-post">
+            Create New Post
+          </a>
+          <div class="col-8 offset-3 mb-3 mt-3" id="message"></div>
+          <div class="col-6 offset-3 mb-3 mt-3" id="feedContainer"></div>
         </div>
       </div>
     </main>
@@ -64,6 +61,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="js/index.js" type="module"></script>
+    <script src="../js/index.js" type="module"></script>
   </body>
 </html>
