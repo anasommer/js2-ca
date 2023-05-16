@@ -12,6 +12,7 @@ export function register() {
     event.preventDefault();
     const formData = new FormData(event.target);
     const profile = Object.fromEntries(formData.entries());
+
     const endpoint = "auth/register";
     const method = "POST";
 
@@ -27,3 +28,19 @@ export function register() {
     form.reset();
   });
 }
+
+// export function login() {
+//   const form = document.querySelector("#registerForm");
+
+//   /**
+//    * Event listener for the form submisiion
+//    * @param {event} event - The submit event.
+//    */
+//   form.addEventListener("submit", (event) => {
+//     event.preventDefault();
+//     const formData = new FormData(event.target);
+//     const profile = Object.fromEntries(formData.entries());
+
+//     handleLogin(profile);
+//   });
+// }
