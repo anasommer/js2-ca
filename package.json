@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass scss:css",
     "watch": "sass --watch scss:css",
-    "docs": "jsdoc -c ./cong.json -r"
+    "docs": "jsdoc -c ./conf.json -r"
   },
   "keywords": [],
   "author": "",
