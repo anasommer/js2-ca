@@ -1,10 +1,12 @@
 import { getPostForm } from "../../helpers/getPostForm.js";
 
 /**
- * Function gets post from API
- * @param {string} url Base link of the API
- * @param {string} token Authorization token stored in local storage
- * @param {number} id Post id
+ * Fetches a post by its ID and populates a form with the post data.
+ *
+ * @param {string} url - The base URL of the API.
+ * @param {string} token - The access token used for authentication.
+ * @param {string} id - The ID of the post to fetch.
+ * @returns {Promise<void>} A promise that resolves when the post data is fetched and the form is populated.
  */
 export async function getPostById(url, token, id) {
   const endpoint = "posts/";

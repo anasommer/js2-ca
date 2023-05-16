@@ -8,8 +8,10 @@ import { displayMessage } from "../../ui/common/displayMessage.js";
 const id = getPostId();
 
 /**
- * Function for updatind the post using PUT method, makes API call inside the function
- * @param {event} event
+ * Updates a post with new title and body content.
+ *
+ * @param {Event} event - The event object triggered by the user action.
+ * @returns {void}
  */
 export async function updatePost(event) {
   event.preventDefault();

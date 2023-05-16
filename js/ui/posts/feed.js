@@ -3,7 +3,9 @@ import spinner from "../utils/spinner.js";
 import { search } from "../../listeners/search.js";
 
 /**
- * Show the posts feed
+ * Sets up the functionality for the feed page.
+ *
+ * @returns {void}
  */
 export function feed() {
   const token = localStorage.getItem("accessToken");

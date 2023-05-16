@@ -1,6 +1,7 @@
 /**
- * Function for getting and storing post ID
- * @returns unique post ID for each post
+ * Retrieves the post ID from the current URL query string.
+ *
+ * @returns {string|null} The post ID, or null if it is not found in the query string.
  */
 export function getPostId() {
   const queryString = document.location.search;

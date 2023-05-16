@@ -1,8 +1,10 @@
 /**
- * Function for collecting the post title, body and tags
- * @param {string} title Title of the post
- * @param {string} body Body of the post
- * @param {string} tags Post tags
+ * Populates the post form with the provided title, body, and tags.
+ *
+ * @param {string} title - The title of the post.
+ * @param {string} body - The body content of the post.
+ * @param {string} tags - The tags associated with the post.
+ * @returns {void}
  */
 export function getPostForm(title, body, tags) {
   const postTitle = document.querySelector("#postTitle");

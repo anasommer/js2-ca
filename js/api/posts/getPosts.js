@@ -5,9 +5,12 @@ import { renderPosts } from "../../ui/posts/renderPosts.js";
 const postsToShow = 20;
 
 /**
- * Function gets all the posts from the API to be rendered on the Feed
- * @param {string} element Element container where all posts will be rendered
+ * Fetches and renders posts for a specific user.
+ *
+ * @param {Element} element - The element where the posts will be rendered.
+ * @returns {Promise<void>} A promise that resolves when the posts are fetched and rendered.
  */
+
 export async function getPosts(element) {
   const token = localStorage.getItem("accessToken");
   const username = JSON.parse(localStorage.getItem("username"));

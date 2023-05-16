@@ -1,7 +1,9 @@
 /**
- * Shows the message to the user if something is ok or wrong
- * @param {string} color Bootstrap color for coloring the message alert
- * @param {string} message The message user will see about the success or error
+ * Displays a message on the page.
+ *
+ * @param {string} [color="success"] - The color of the message. Defaults to "success".
+ * @param {string} [message="Success!"] - The message to display. Defaults to "Success!".
+ * @returns {void}
  */
 export function displayMessage(color = "success", message = "Success!") {
   document.getElementById("message").innerHTML = `

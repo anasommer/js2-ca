@@ -1,7 +1,9 @@
 import { handleLogin } from "../../api/profile/login.js";
 
 /**
- * Performs a login operation
+ * Sets up the login functionality for the login form.
+ *
+ * @returns {void}
  */
 export function login() {
   const form = document.querySelector("#registerForm");

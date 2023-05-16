@@ -1,9 +1,12 @@
 import { BASE_URL } from "../constants.js";
 import { redirectToPostFeed } from "../../helpers/redirect.js";
 import { displayMessage } from "../../ui/common/displayMessage.js";
+
 /**
- * Handles the login operation
- * @param {object} profile - The user profile object.
+ * Handles the login process for a user profile.
+ *
+ * @param {object} profile - The user profile containing login credentials.
+ * @returns {void}
  */
 
 export async function handleLogin(profile) {

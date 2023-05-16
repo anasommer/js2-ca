@@ -1,5 +1,7 @@
 /**
- * Builds a dynamic menu
+ * Builds the navigation menu based on the user's authentication status.
+ *
+ * @returns {void}
  */
 export function buildMenu() {
   const menu = document.querySelector("#menu");

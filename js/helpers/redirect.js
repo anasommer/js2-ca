@@ -2,8 +2,10 @@ import { BASE_URL } from "../api/constants.js";
 import { displayMessage } from "../ui/common/displayMessage.js";
 
 /**
- * Function for redirecting to the Feed page when user trying to login.
- * @param {string} accessToken Authorization token stored in local storage
+ * Redirects to the post feed page after successful login.
+ *
+ * @param {string} accessToken - The access token for authentication.
+ * @returns {void}
  */
 export async function redirectToPostFeed(accessToken) {
   const options = {

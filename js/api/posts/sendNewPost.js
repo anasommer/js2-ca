@@ -2,10 +2,12 @@ import { displayMessage } from "../../ui/common/displayMessage.js";
 import { backToFeed } from "../../helpers/backToFeed.js";
 
 /**
- * Function that sends new post to the API
- * @param {string} BASE_URL Base link of the API
- * @param {string} endpoint Desired endpoint of the API
- * @param {object} options Object containing authorization, headers, body etc.
+ * Sends a new post to the specified endpoint.
+ *
+ * @param {string} BASE_URL - The base URL of the API.
+ * @param {string} endpoint - The endpoint to send the new post to.
+ * @param {object} options - (Optional) Additional options for the fetch request.
+ * @returns {void}
  */
 export async function sendNewPost(BASE_URL, endpoint, options = {}) {
   fetch(`${BASE_URL}${endpoint}`, options)

@@ -14,7 +14,9 @@ if (form) {
 }
 
 /**
- * Function that calls another function to get post data for the post which will be edited by the user
+ * Fetches and displays the post to be edited.
+ *
+ * @returns {void}
  */
 export function editPost() {
   getPostById(BASE_URL, accessToken, getPostId());

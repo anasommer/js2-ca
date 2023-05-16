@@ -1,10 +1,12 @@
 import { displayMessage } from "../ui/common/displayMessage.js";
 
 /**
- * Make a call to API to get data
- * @param {string} BASE_URL Link to the NorOff API
- * @param {string} endpoint Desired endpoint of the API
- * @param {object} options The object containing headers, method, authorization, and other information that API needs
+ * Fetches data from a specified endpoint using the provided options.
+ *
+ * @param {string} BASE_URL - The base URL of the API.
+ * @param {string} endpoint - The endpoint to fetch the data from.
+ * @param {object} options - (Optional) Additional options for the fetch request.
+ * @returns {void}
  */
 export async function fetchData(BASE_URL, endpoint, options = {}) {
   try {

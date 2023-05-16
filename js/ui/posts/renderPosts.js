@@ -3,9 +3,11 @@ import { deletePost } from "../../api/posts/deletePost.js";
 import { showPostByTags } from "../../listeners/showPostByTags.js";
 
 /**
- * Renders HTML for post
- * @param {object} post The post Object from the API response
- * @param {element} element The element on the page where the post should be rendered on
+ * Renders a post on the page.
+ *
+ * @param {Object} post - The post object.
+ * @param {HTMLElement} element - The container element to append the post to.
+ * @returns {void}
  */
 export function renderPosts(post, element) {
   spinner.style.display = "none";
@@ -51,11 +53,23 @@ export function renderPosts(post, element) {
   element && element.append(postItem);
 }
 
+/**
+ * Displays a confirmation dialog for deleting a post and calls the deletePost function if confirmed.
+ *
+ * @param {Event} event - The click event.
+ * @returns {void}
+ */
 function confirmDelete(event) {
   const postId = event.target.getAttribute("data-id");
   confirm("Please confirm deleting of post") && deletePost(postId);
 }
 
+/**
+ * Redirects to the edit page for a specific post.
+ *
+ * @param {Event} event - The click event.
+ * @returns {void}
+ */
 function redirectToEdit(event) {
   const postId = event.target.getAttribute("data-id");
   window.location.replace(`../../posts/edit.html?id=${postId}`);

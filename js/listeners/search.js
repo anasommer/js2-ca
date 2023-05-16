@@ -1,6 +1,8 @@
 /**
- * Search a word or a sentence on the page
- * @param {event} event Search input
+ * Searches for a specified value within the current page.
+ *
+ * @param {Event} event - The event object triggered by the user action.
+ * @returns {void}
  */
 export function search(event) {
   event.preventDefault();

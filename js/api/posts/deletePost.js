@@ -3,11 +3,12 @@ import { accessToken } from "../token.js";
 import { displayMessage } from "../../ui/common/displayMessage.js";
 
 /**
+ * Deletes a post with the specified ID.
+ *
+ * @param {string} postId - The ID of the post to delete.
+ * @returns {Promise<void>} A promise that resolves when the post is deleted.
+ */
 
-Deletes a post with the specified postId.
-@param {string} postId - The ID of the post to be deleted.
-@returns {Promise<void>} - A promise that resolves when the post is successfully deleted.
-*/
 export async function deletePost(postId) {
   const endpoint = "posts/";
   const options = {

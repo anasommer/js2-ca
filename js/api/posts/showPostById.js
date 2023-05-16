@@ -7,7 +7,9 @@ const feedContainer = document.querySelector("#feedContainer");
 const token = localStorage.getItem("accessToken");
 
 /**
- * Shows unique page with only one post by its ID
+ * Fetches and displays a post by its ID.
+ *
+ * @returns {void}
  */
 export async function showPostById() {
   const id = getPostId();

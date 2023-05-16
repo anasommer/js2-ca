@@ -3,7 +3,9 @@ import { sendNewPost } from "../../api/posts/sendNewPost.js";
 import { accessToken } from "../../api/token.js";
 
 /**
- * Create new post and make an API call
+ * Sets up the functionality for creating a new post.
+ *
+ * @returns {void}
  */
 export function createNewPost() {
   const newPostForm = document.querySelector("#newPostForm");
